@@ -1,0 +1,158 @@
+.main-container {
+    flex: 1;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 10px;
+    overflow-x: visible;
+}
+
+.month-text {
+    font-weight:bold;
+}
+
+.expenses {
+    margin: 5px;
+}
+
+.overview-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    // grid-template-columns: repeat(4, 1fr);
+    margin-top: 10px;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 100vw;
+    // height: 100vh;
+}
+
+.month0{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.month1{
+    grid-column: 2;
+    grid-row: 1;
+}
+.month2{
+    grid-column: 3;
+    grid-row: 1;
+}
+.month3{
+    grid-column: 4;
+    grid-row: 1;
+}
+.month4{
+    grid-column: 1;
+    grid-row: 2;
+}
+.month5{
+    grid-column: 2;
+    grid-row: 2;
+}
+.month6{
+    grid-column: 3;
+    grid-row: 2;
+}
+.month7{
+    grid-column: 4;
+    grid-row: 2;
+}
+.month8{
+    grid-column: 1;
+    grid-row: 3;
+}
+.month9{
+    grid-column: 2;
+    grid-row: 3;
+}
+.month10{
+    grid-column: 3;
+    grid-row: 3;
+}
+.month11{
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.chart-wrapper {
+    display: grid;
+    margin-left: 10px;
+    margin-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 95%;
+    // height: 100vh;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.chart0 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.chart1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.chart1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.month-selector {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.monthly-report-wrapper{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 7vh;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.total-spent{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.budget-view{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.report{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.title-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    width: 100%;
+    height: 7vh;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: column;
+    justify-content: end
+}
+
+.greeting {
+    margin-left: 10px;
+    font-size: 1;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.mode-switcher {
+    grid-column: 4;
+    grid-row: 1;
+    margin-top: 10px;
+}
+
+
