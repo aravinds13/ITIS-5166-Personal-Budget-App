@@ -206,3 +206,5 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
     console.log(`API served at port ${port}`);
 })
+
+module.exports = app;
