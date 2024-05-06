@@ -94,7 +94,6 @@ const ModifyDataPage = () => {
             headers: {'Authorization': `Bearer ${token}`},
             data
         }).then((response) => {
-            console.log(response.data);
             getUserData();
             setDataChanged(false);
             setEditMode(false);
@@ -112,14 +111,12 @@ const ModifyDataPage = () => {
         let rows = [];
         let expenses = data.months[month].expenses;
         let index = 0;
-        console.log(items);
         Object.entries(expenses).forEach(([key, value]) => {
             rows.push({name: key, value: value, index})
             index+=1;
           });
         return(
             rows.map((row) => {
-                console.log(row);
                 return(
                     <TableRow
                         key={row.index}
@@ -156,7 +153,7 @@ const ModifyDataPage = () => {
     
     const handleDelete = (rows, rowIndex) => {
         let updatedExpenses = {};
-        let updatedItems = JSON.parse(JSON.stringify(updatedData)); // Deep copy
+        let updatedItems = JSON.parse(JSON.stringify(updatedData));
     
         updatedItems.months[selectedMonth].total -= rows[rowIndex].value;
         
@@ -181,7 +178,6 @@ const ModifyDataPage = () => {
 
     const handleSave = () => {
         if(isEditBudget){
-            console.log("currentBudget",currentBudget)
             let updatedItems = JSON.parse(JSON.stringify(updatedData));
             updatedItems.months[selectedMonth].budget = Number(currentBudget);
             setUpdatedData(updatedItems);
@@ -208,7 +204,7 @@ const ModifyDataPage = () => {
         let rowIndex = currentRow[1];
 
         let updatedExpenses = {};
-        let updatedItems = JSON.parse(JSON.stringify(updatedData)); // Deep copy
+        let updatedItems = JSON.parse(JSON.stringify(updatedData));
         let valueDifference = updatedExpenseValue - rows[rowIndex].value;
         let currentTotal = Number(updatedItems.months[selectedMonth].total);
         updatedItems.months[selectedMonth].total = currentTotal + Number(valueDifference);
@@ -225,7 +221,7 @@ const ModifyDataPage = () => {
     }
 
     const handleAdd = () => {
-        let updatedItems = JSON.parse(JSON.stringify(updatedData)); // Deep copy
+        let updatedItems = JSON.parse(JSON.stringify(updatedData));
         let currentTotal = Number(updatedItems.months[selectedMonth].total)
         updatedItems.months[selectedMonth].total = currentTotal + Number(newExpenseValue);
         updatedItems.months[selectedMonth].expenses[newExpenseName] = Number(newExpenseValue);

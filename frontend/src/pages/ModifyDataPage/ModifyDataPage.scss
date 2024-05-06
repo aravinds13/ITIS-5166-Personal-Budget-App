@@ -3,7 +3,6 @@
     grid-template-columns: repeat(10, 1fr);
     gap: 5px;
     width: 100%;
-    // height: 7vh;
     grid-auto-rows: minmax(100px, auto);
     grid-auto-flow: column;
     justify-content: end
@@ -11,8 +10,6 @@
 .month-selector {
     grid-column: 1;
     grid-row: 1;
-    // margin-top: 20px;
-    // margin-bottom: 20px;
     margin-left: 10px;
 }
 
@@ -20,7 +17,6 @@
     grid-column: 2;
     grid-row: 1;
     margin-top: 20px;
-    // margin-bottom: 20px;
     margin-left: 10px;
 }
 
@@ -28,7 +24,6 @@
     grid-column: 3;
     grid-row: 1;
     margin-top: 30px;
-    // margin-bottom: 20px;
     margin-left: 1px;
 }
 

@@ -17,12 +17,10 @@
 .overview-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    // grid-template-columns: repeat(4, 1fr);
     margin-top: 10px;
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     width: 100vw;
-    // height: 100vh;
 }
 
 .month0{
@@ -82,7 +80,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 95%;
-    // height: 100vh;
     grid-auto-rows: minmax(100px, auto);
 }
 

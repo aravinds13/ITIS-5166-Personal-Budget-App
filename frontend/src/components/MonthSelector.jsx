@@ -37,11 +37,6 @@ const MonthSelector = (props) => {
                     <MenuItem value={9}>{monthList[9]}</MenuItem>
                     <MenuItem value={10}>{monthList[10]}</MenuItem>
                     <MenuItem value={11}>{monthList[11]}</MenuItem>
-                    {/* {
-                        monthList.forEach((item, index) => {
-                            <MenuItem value={index}>{item}</MenuItem>
-                        })
-                    } */}
                 </Select>
             </FormControl>
         </Box>

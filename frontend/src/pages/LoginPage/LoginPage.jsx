@@ -72,7 +72,7 @@ const LoginPage = () => {
               setError(true);
               break;
             default:
-              console.log("whaaaat?!");
+              console.log(err.response);
               
           } 
         })

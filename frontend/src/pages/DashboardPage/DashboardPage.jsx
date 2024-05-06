@@ -43,7 +43,6 @@ const DashboardPage = () => {
 
     useEffect(() => {
         if(location?.state?.email){
-            console.log(location.state.email);
             localStorage.setItem("currentUserEmail", location.state.email);
             setItems(location.state);
             setIsLoading(false);
@@ -85,8 +84,6 @@ const DashboardPage = () => {
         Filler
     );
 
-    //TODO: have a mode to show all the graphs
-
     const generateChart = (item, chartType) => {
         let labels = [];
         let data = [];
@@ -94,7 +91,6 @@ const DashboardPage = () => {
             labels.push(key);
             data.push(item?.expenses[key]);
         }
-        console.log(labels, data)
         switch (chartType){
             case 'pie':
                 let pieChartData = {
@@ -181,13 +177,11 @@ const DashboardPage = () => {
         );
       };
 
-    console.log(items)
     return (
         <>
         <CommonComponents items={items}/>
         {isLoading ? <Loader isLoading/> :
         <>
-        {/* <Navbar/> */}
         <div className="main-container">
             <div className="title-wrapper">
                 <Greeting name={name}/>

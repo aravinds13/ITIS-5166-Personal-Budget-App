@@ -33,9 +33,6 @@ const ExpenseCard = (props) => {
         <Modal
             open={isModalOpen}
             onClose={()=>setModalOpen(false)}
-            
-            // aria-labelledby="modal-modal-title"
-            // aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
                 <div style={{display:'grid', gridTemplateColumns:'repeat(20, 5%)'}}>
