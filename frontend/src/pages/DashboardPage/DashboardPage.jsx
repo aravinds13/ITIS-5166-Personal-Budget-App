@@ -194,8 +194,8 @@ const DashboardPage = () => {
                         value={isOverviewMode}
                         onChange={() => {setOverviewMode(!isOverviewMode)}}
                     >
-                        <FormControlLabel value={true} control={<Radio />} label="Overview" aria-label="overview-mode"/>
-                        <FormControlLabel value={false} control={<Radio />} label="Monthly" aria-label="monthly-mode"/>
+                        <FormControlLabel value={true} control={<Radio />} label="Overview" aria-label="overview-mode" key={"overview"}/>
+                        <FormControlLabel value={false} control={<Radio />} label="Monthly" aria-label="monthly-mode" key={"monthly"}/>
                     </RadioGroup>
                 </div>
             </div>
