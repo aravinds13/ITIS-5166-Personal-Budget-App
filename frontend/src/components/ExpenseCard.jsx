@@ -84,22 +84,33 @@ const ExpenseCard = (props) => {
             <Typography variant="h5">
             {props.expenseDetails.month}
             </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            Budget: $ {props.expenseDetails.budget} | Total spent: $ {props.expenseDetails.total}
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.primary">
-                Report: {budget>total || budget===total ?
-                    <><span style={{color: "green"}}>WITHIN BUDGET</span></>:
-                    <><span style={{color: "red"}}>OVERSPENT</span></>
-                    }
-                
-                <br/>{Math.floor(((total)/budget)*100)}% utilization
-                <br/>
-            </Typography>
+            {Object.keys(props.expenseDetails.expenses).length !== 0 ? (
+            <>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    Budget: $ {props.expenseDetails.budget} | Total spent: $ {props.expenseDetails.total}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.primary">
+                    Report: {budget>total || budget===total ?
+                        <><span style={{color: "green"}}>WITHIN BUDGET</span></>:
+                        <><span style={{color: "red"}}>OVERSPENT</span></>
+                        }
+                    
+                    <br/>{Math.floor(((total)/budget)*100)}% utilization
+                    <br/>
+                </Typography>
+            </>
+            ) :
+            (
+                <Typography color="text.secondary">No data available</Typography>
+            )
+            }
         </CardContent>
-        <CardActions>
-            <Button size="small" onClick={()=>setModalOpen(true)}>View More</Button>
-        </CardActions>
+        {Object.keys(props.expenseDetails.expenses).length !== 0 &&(
+            <CardActions>
+                <Button size="small" onClick={()=>setModalOpen(true)}>View More</Button>
+            </CardActions>
+        )}
+        
         </Card>
         </>
     );
