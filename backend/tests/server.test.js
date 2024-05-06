@@ -1,6 +1,7 @@
+//Unit tests
+
 const supertest = require('supertest');
-const app = require('./server');
-const jwt = require('jsonwebtoken');
+const app = require('../server');
 
 // Mock MongoDB implementation
 const mockMongoClient = {

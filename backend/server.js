@@ -154,7 +154,7 @@ app.post('/api/v1/update-user-info', async (req, res) => {
     }
 })
 
-app.post('/api/v1/refresh-token', async (req, res) => {
+app.post('/api/v1/refresh-token', (req, res) => {
     const token = generateToken(req.body.name, req.body.email);
     res.status(200)
         .json({
