@@ -1,5 +1,3 @@
-//TODO: Fix redundant code
-
 const express = require('express');
 const jwt = require("jsonwebtoken");
 const app = express();
@@ -17,7 +15,7 @@ const secretKey = process.env.SECRET_KEY;
 const baseUrl = process.env.BASE_URL; 
 const frontendPort = process.env.FRONTEND_PORT;
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
@@ -25,18 +23,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-type, Authorization');
     next();
 })
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.setHeader('Access-Control-Allow-Methods', 'POST');
-//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     res.setHeader('Access-Control-Allow-Credentials', 'true');
-//     next();
-// });
 
 app.post('/api/v1/login', async (req, res) => {
 
     const response = await getUserInfo(req);
-    console.log(response);
     if(response && response.password === req.body.password){
         const token = generateToken(response.name, response.email);
         res
@@ -137,29 +127,23 @@ app.post('/api/v1/get-user-info', async (req, res) => {
 });
 
 app.post('/api/v1/update-user-info', async (req, res) => {
-    console.log(req.body);
     const client = new MongoClient(mongoUrl);
     try{
         await client.connect();
         const db = client.db(mongodbName);
         const collection = db.collection(mongoCollectionName);
-        console.log(req?.body?.email);
         let email = req?.body?.email
         const query = {email};
         const updatedValues = [...req?.body.months];
         collection.updateOne(
-            query, // Filter by email
-            { $set: { months: updatedValues } } // Update the entire months array
+            query,
+            { $set: { months: updatedValues } }
           ).then(result => {
-            console.log('Document updated successfully');
             res.json(result);
-            // Close the connection
             client.close();
           })
           .catch(error => {
-            console.error('Error updating document:', error);
             res.json(error);
-            // Close the connection
             client.close();
           });
     }
@@ -187,13 +171,11 @@ const getUserInfo = async (req) => {
         await client.connect();
         const db = client.db(mongodbName);
         const collection = db.collection(mongoCollectionName);
-        console.log(req?.body?.email);
         let email = req?.body?.email
         const query = {email};
         const document = await collection.findOne(query);
         client.close();
         if(document && document.email === email){
-            console.log(document);
             return document;
         }
         else{
