@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import Navbar from './Navbar';
-import isTokenValid from '../helpers/isTokenValid';
-import TokenValidityAlert from './TokenValidityAlert';
+import Navbar from '../Navbar/Navbar';
+import isTokenValid from '../../helpers/isTokenValid';
+import TokenValidityAlert from '../TokenValidityAlert/TokenValidityAlert';
 
 const CommonComponents = (props) => {
     const [isTokenAlert, setTokenAlert] = useState(false);

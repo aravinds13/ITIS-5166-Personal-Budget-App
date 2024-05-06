@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom"; 
-import Greeting from "../../components/Greeting";
-import MonthSelector from "../../components/MonthSelector";
-import Loader from "../../components/Loader";
-import CommonComponents from "../../components/CommonComponents";
+import Greeting from "../../components/Greeting/Greeting";
+import MonthSelector from "../../components/MonthSelector/MonthSelector";
+import Loader from "../../components/Loader/Loader";
+import CommonComponents from "../../components/CommonComponents./CommonComponents";
 import './ModifyDataPage.scss';
 import axios from "axios";
 

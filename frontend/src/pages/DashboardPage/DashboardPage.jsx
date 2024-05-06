@@ -2,14 +2,14 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './DashboardPage.scss'
 import monthList from "../../helpers/monthList";
-import MonthSelector from "../../components/MonthSelector";
+import MonthSelector from "../../components/MonthSelector/MonthSelector";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
-import Loader from "../../components/Loader";
-import Greeting from "../../components/Greeting";
-import ExpenseCard from "../../components/ExpenseCard";
+import Loader from "../../components/Loader/Loader";
+import Greeting from "../../components/Greeting/Greeting";
+import ExpenseCard from "../../components/ExpenseCard/ExpenseCard";
 import Typography from '@mui/material/Typography';
 import axios from "axios";
 
@@ -25,7 +25,7 @@ import {
 } from 'chart.js';
 
 import { Pie, Radar, PolarArea } from 'react-chartjs-2';
-import CommonComponents from "../../components/CommonComponents";
+import CommonComponents from "../../components/CommonComponents./CommonComponents";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost';
 const SERVER_PORT = process.env.SERVER_PORT || 3008;
