@@ -4,7 +4,7 @@ const Greeting = (props) => {
             "marginLeft": "10px",
             "gridColumn": 1,
             "gridRow": 1
-        }}>Hello, {props.name}!</h3>
+        }} id="greeting">Hello, {props.name}!</h3>
     )
 }
 

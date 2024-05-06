@@ -103,7 +103,7 @@ const LoginPage = () => {
               {
                 !isLogin &&
                 <TextField 
-                  id="outlined-basic"
+                  id="text-name"
                   label="Name"
                   variant="standard"
                   aria-label="textfield-name"
@@ -114,7 +114,7 @@ const LoginPage = () => {
             </div>
             <div>
               <TextField 
-                id="outlined-basic"
+                id="text-email"
                 label="Email"
                 variant="standard"
                 aria-label="textfield-email"
@@ -124,7 +124,7 @@ const LoginPage = () => {
             </div>
             <div>
               <TextField 
-                id="outlined-basic"
+                id="text-password"
                 label="Password"
                 variant="standard"
                 aria-label="textfield-password"
@@ -151,6 +151,7 @@ const LoginPage = () => {
               variant="outlined"
               aria-label="button-login"
               onClick={() => handleLogin()}
+              id="btn-login"
             >
               {isLogin ? `Login` : `Signup`}
             </Button>
