@@ -143,7 +143,7 @@ const LoginPage = () => {
             >
               <>{isLogin ? 'Don\'t' : 'Already'} have an account? </>
               
-              <a onClick={() => handleSwitch()} href="#">
+              <a onClick={() => handleSwitch()} href="#" id="btn-switch-mode">
                 {isLogin ? 'Create one here.' : 'Login here.'}
               </a>
             </div>
