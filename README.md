@@ -5,12 +5,14 @@ A Personal Budget App using React and Node (Final project for ITIS-5166, Spring 
 
 ### Frontend
 - [React](https://react.dev/)
+- [Create React App](https://create-react-app.dev/)
 - [React Router](https://reactrouter.com/en/main)
 - [MUI](https://mui.com/)
 - [Axios](https://axios-http.com/)
 - [Chart.js](https://www.chartjs.org/)
 - [react-chartjs-2](https://react-chartjs-2.js.org/)
 - [jsHashes](https://www.npmjs.com/package/jshashes)
+
 
 ### Backend
 - [Node.js](https://nodejs.org/en)
