@@ -20,6 +20,7 @@ A Personal Budget App using React and Node (Final project for ITIS-5166, Spring 
 - [JWT](https://jwt.io/)
 - [cors](https://www.npmjs.com/package/cors)
 - [dotenv](https://www.npmjs.com/package/dotenv)
+- [PM2](https://pm2.keymetrics.io)
 
 
 ### Testing
