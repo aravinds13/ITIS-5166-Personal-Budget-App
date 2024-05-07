@@ -29,7 +29,7 @@ A Personal Budget App using React and Node (Final project for ITIS-5166, Spring 
 - [Applitool Eyes](https://applitools.com/platform/eyes/) (Visual Regression Testing)
 
 ### Hosting
-- [DigitalOcean] (https://www.digitalocean.com/)
+- [DigitalOcean](https://www.digitalocean.com/)
 
 ## Using the application 🧑🏻‍💻
 
